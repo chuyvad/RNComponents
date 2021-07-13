@@ -1,9 +1,11 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
 
-import { HomeScreen } from './src/screens/HomeScreen';
+import { NavigationStack } from './src/navigation/NavigationStack';
 
 const App = () => (
-  <HomeScreen />
+  <NavigationStack />
 );
 
 export default App;

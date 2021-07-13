@@ -10,15 +10,15 @@ import {
 
 import { FlastListMenuItem } from '../components/FlastListMenuItem';
 
-export const HomeScreen = () => {
+export const HomeScreen = ({ navigation }) => {
     const menuItem = [
         {
             title: 'Alerts',
-            action: () => { },
+            action: () => navigation.navigate('AlertsScreen', {}),
         },
         {
             title: 'TextInput',
-            action: () => { },
+            action: () => navigation.navigate('TextInputScreen', {}),
         },
     ];
 
