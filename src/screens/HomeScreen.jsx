@@ -4,11 +4,11 @@ import {
     FlatList,
     SafeAreaView,
     StyleSheet,
-    Text,
     View,
 } from 'react-native';
 
 import { FlastListMenuItem } from '../components/FlastListMenuItem';
+import { HeaderTitle } from '../components/HeaderTitle';
 
 export const HomeScreen = ({ navigation }) => {
     const menuItem = [
@@ -34,9 +34,7 @@ export const HomeScreen = ({ navigation }) => {
     );
 
     const renderListHeader = () => (
-        <View style={styles.headerContainer}>
-            <Text style={styles.headerTitle}>Options Menu</Text>
-        </View>
+        <HeaderTitle title={'Options Menu'} />
     );
 
     return (
@@ -64,12 +62,5 @@ const styles = StyleSheet.create({
     itemSeparator: {
         height: 1,
         backgroundColor: 'gray',
-    },
-    headerContainer: {
-        marginVertical: 20,
-    },
-    headerTitle: {
-        fontSize: 35,
-        fontWeight: 'bold',
     },
 });
