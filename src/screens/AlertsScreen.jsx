@@ -8,6 +8,7 @@ import {
 import prompt from 'react-native-prompt-android';
 
 import { HeaderTitle } from '../components/HeaderTitle';
+import { globalStyles } from '../theme/appTheme';
 
 export const AlertsScreen = () => {
     const handleOpenAlert = () => {
@@ -50,7 +51,7 @@ export const AlertsScreen = () => {
     };
 
     return (
-        <View style={{ flex: 1, marginHorizontal: 20 }}>
+        <View style={globalStyles.globalMargin}>
             <HeaderTitle title={'Alerts'} />
             <Button
                 title={'Open Alert'}
