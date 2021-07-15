@@ -20,6 +20,18 @@ export const HomeScreen = ({ navigation }) => {
             title: 'TextInput',
             action: () => navigation.navigate('TextInputScreen', {}),
         },
+        {
+            title: 'PushToRefresh',
+            action: () => navigation.navigate('PushToRefreshScreen', {}),
+        },
+        {
+            title: 'SectionList',
+            action: () => navigation.navigate('SectionListScreen', {}),
+        },
+        {
+            title: 'InfiniteScroll',
+            action: () => navigation.navigate('InfiniteScrollScreen', {}),
+        },
     ];
 
     const renderItem = ({ item, index }) => (
