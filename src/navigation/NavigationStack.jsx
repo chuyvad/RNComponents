@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { AlertsScreen } from '../screens/AlertsScreen';
+import { FetchScreen } from '../screens/FetchScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 import { InfiniteScrollScreen } from '../screens/InfiniteScrollScreen';
 import { PushToRefreshScreen } from '../screens/PushToRefreshScreen';
@@ -32,6 +33,7 @@ export const NavigationStack = () => {
                     <Stack.Screen name="PushToRefreshScreen" component={PushToRefreshScreen} />
                     <Stack.Screen name="SectionListScreen" component={SectionListScreen} />
                     <Stack.Screen name="InfiniteScrollScreen" component={InfiniteScrollScreen} />
+                    <Stack.Screen name="FetchScreen" component={FetchScreen} />
                 </Stack.Navigator>
             </NavigationContainer>
         </View>

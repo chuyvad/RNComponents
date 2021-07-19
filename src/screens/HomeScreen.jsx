@@ -32,6 +32,10 @@ export const HomeScreen = ({ navigation }) => {
             title: 'InfiniteScroll',
             action: () => navigation.navigate('InfiniteScrollScreen', {}),
         },
+        {
+            title: 'Fetch',
+            action: () => navigation.navigate('FetchScreen', {}),
+        },
     ];
 
     const renderItem = ({ item, index }) => (
