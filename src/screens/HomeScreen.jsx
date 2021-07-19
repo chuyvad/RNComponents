@@ -36,6 +36,10 @@ export const HomeScreen = ({ navigation }) => {
             title: 'Fetch',
             action: () => navigation.navigate('FetchScreen', {}),
         },
+        {
+            title: 'Theme',
+            action: () => navigation.navigate('ChangeThemeScreen', {}),
+        },
     ];
 
     const renderItem = ({ item, index }) => (

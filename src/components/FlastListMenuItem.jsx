@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import {
     StyleSheet,
@@ -6,13 +6,19 @@ import {
     TouchableOpacity,
 } from 'react-native';
 
+import { ThemeContext } from '../context/theme/ThemeContext';
+
 export const FlastListMenuItem = ({ item, index }) => {
+    const { theme: { colors } } = useContext(ThemeContext);
     return (
         <TouchableOpacity
             key={index}
             onPress={item.action}
         >
-            <Text style={styles.text}>{item.title}</Text>
+            <Text style={{
+                ...styles.text,
+                color: colors.text,
+            }}>{item.title}</Text>
         </TouchableOpacity>
     );
 };

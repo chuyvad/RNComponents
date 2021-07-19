@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import {
     StyleSheet,
@@ -6,11 +6,20 @@ import {
     View,
 } from 'react-native';
 
-export const HeaderTitle = ({ title }) => (
-    <View style={styles.headerContainer}>
-        <Text style={styles.headerTitle}>{title}</Text>
-    </View>
-);
+import { ThemeContext } from '../context/theme/ThemeContext';
+
+export const HeaderTitle = ({ title }) => {
+    const { theme: { colors } } = useContext(ThemeContext);
+
+    return (
+        <View style={styles.headerContainer}>
+            <Text style={{
+                ...styles.headerTitle,
+                color: colors.text,
+            }}>{title}</Text>
+        </View>
+    );
+};
 
 const styles = StyleSheet.create({
     headerContainer: {
